@@ -75,7 +75,8 @@ class Settings extends CI_Controller {
 			);
 
 			if ($this->form_validation->run() == FALSE) {
-				$this->load->view('edit_view', $data);
+				$data['main_content'] = 'edit_view';
+				$this->load->view('includes/template', $data);
 			}
 			else {
 				if ($this->do_upload('userfile')) {
@@ -110,7 +111,8 @@ class Settings extends CI_Controller {
 		$this->form_validation->set_rules('newPassConf', 'new password confirmation', 'trim|required|matches[newPass]');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('edit_password_view');
+			$data['main_content'] = 'edit_password_view';
+			$this->load->view('includes/template', $data);
 		}
 		else {
 			$this->members_model->password();

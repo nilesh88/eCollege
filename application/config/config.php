@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://walsh.triradiate.com/';
+$config['base_url']	= 'http://ecollege.local/';
 
 /*
 |--------------------------------------------------------------------------
