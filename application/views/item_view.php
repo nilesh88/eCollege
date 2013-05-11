@@ -29,6 +29,7 @@
 				<?php else: ?>
 				<p><img class="img-polaroid" src="http://placehold.it/300x200" alt="300x200" /></p>
 				<?php endif; ?>
+                                
 				<table class="table table-striped">
 					<tbody>
 						<tr>
