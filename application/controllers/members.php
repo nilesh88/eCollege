@@ -12,11 +12,13 @@ class Members extends CI_Controller {
 	function index() {
 		$data = array();
 
+		$data['main_content'] = 'members_view';
+
 		if ($result = $this->members_model->get_user_items()) {
 			$data['rows'] = $result;
 		}
 
-		$this->load->view('members_view', $data);
+		$this->load->view('includes/template', $data);
 	}
 
 	function do_upload() {
@@ -80,7 +82,8 @@ class Members extends CI_Controller {
 		$data['category_options'] = $this->members_model->category_options();
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('create_view', $data);
+			$data['main_content'] = 'create_view';
+			$this->load->view('includes/template', $data);
 		}
 		else {
 			$id = $this->session->userdata('id');
@@ -145,7 +148,8 @@ class Members extends CI_Controller {
 			$data['category_options'] = $this->members_model->category_options();
 
 			if ($this->form_validation->run() == FALSE) {
-				$this->load->view('update_view', $data);
+				$data['main_content'] = 'update_view';
+				$this->load->view('includes/template', $data);
 			}
 			else {
 				if ($this->do_upload('userfile')) {
