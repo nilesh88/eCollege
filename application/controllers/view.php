@@ -10,6 +10,8 @@ class View extends CI_Controller {
 	function index() {
 		$data = array();
 
+		$data['main_content'] = 'item_view';
+
 		if ($result = $this->home_model->get_item_data()) {
 			$data = array(
 				'id' => $result->id,
@@ -29,6 +31,6 @@ class View extends CI_Controller {
 			);
 		}
 
-		$this->load->view('item_view', $data);
+		$this->load->view('includes/template', $data);
 	}
 }
