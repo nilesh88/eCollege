@@ -1,0 +1,25 @@
+body {
+	padding: 60px 0 40px;
+	background-color: #f5f5f5;
+}
+.form-signin, .form-register {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 0 auto 20px;
+	background-color: #fff;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.form-signin .form-signin-heading, .form-register .form-register-heading {
+	font-weight: 200;
+}
+.form-signin .form-signin-heading, .form-register .form-register-heading,
+.form-signin .checkbox, .form-register .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin input[type="text"], .form-register input[type="text"],
+.form-signin input[type="password"], .form-register input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}

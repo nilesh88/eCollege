@@ -1,0 +1,204 @@
+body {
+	padding: 40px 0 40px;
+}
+.font-resize {
+	font-size: 14px;
+	line-height: 18px;
+}
+table#items td {
+	vertical-align: middle;
+}
+.table td .media-object {
+	margin-top: 0;
+}
+.dropdown-menu {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	moz-border-radius: 0;
+}
+.breadcrumb {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	moz-border-radius: 0;
+}
+.breadcrumb a:hover {
+	text-decoration: none;
+}
+.well {
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	moz-border-radius: 0;
+}
+.thumbnail {
+	padding: 4px 0 0 0;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	moz-border-radius: 0;
+}
+.thumbnail > img {
+	margin-bottom: 4px;
+}
+.thumbnail .caption {
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	min-height: 170px;
+	max-height: 170px;
+}
+.modal-header {
+	padding: 0;
+	font-weight: 200;
+}
+.media-object {
+	margin-top: 5px;
+	margin-right: 5px;
+}
+.media-heading {
+	font-weight: 200;
+}
+.page-header .new-item {
+	margin-top: 5px;
+}
+.page-header h1 {
+	font-weight: 200;
+}
+.heading {
+	text-align: center;
+	color: #5a5a5a;
+}
+.heading h1 {
+	margin: 60px 0 10px;
+	font-size: 60px;
+	font-weight: 200;
+	line-height: 1;
+	letter-spacing: -1px;
+}
+.heading .heading-byline {
+	margin-bottom: 40px;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.25;
+	color: #999;
+}
+.jumbotron {
+	position: relative;
+	padding: 40px 0;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+	background: #4786b3;
+	background: -moz-radial-gradient(center, ellipse cover, #4786b3 0%, #2e5673 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4786b3), color-stop(100%,#2e5673));
+	background: -webkit-radial-gradient(center, ellipse cover, #4786b3 0%,#2e5673 100%);
+	background: -o-radial-gradient(center, ellipse cover, #4786b3 0%,#2e5673 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #4786b3 0%,#2e5673 100%);
+	background: radial-gradient(center, ellipse cover, #4786b3 0%,#2e5673 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4786b3', endColorstr='#2e5673',GradientType=1 );
+	-webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	-moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+	box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
+}
+.jumbotron h1 {
+	font-size: 80px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1;
+}
+.jumbotron p {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 1.25;
+	margin-bottom: 30px;
+}
+.masthead {
+	padding: 70px 0 80px;
+	margin-bottom: 0;
+	color: #fff;
+}
+.masthead h1 {
+	font-size: 120px;
+	line-height: 1;
+	letter-spacing: -2px;
+}
+.masthead p {
+	font-size: 40px;
+	font-weight: 200;
+	line-height: 1.25;
+}
+.masthead .btn {
+	padding: 19px 24px;
+	font-size: 24px;
+	font-weight: 200;
+	color: #fff;
+	border: 0;
+}
+.masthead .btn {
+	padding: 19px 24px;
+	font-size: 24px;
+	font-weight: 200;
+	color: #fff;
+	border: 0;
+}
+.bs-docs-social {
+	padding: 15px 0;
+	text-align: center;
+	background-color: #f5f5f5;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+}
+@media (min-width: 1200px) {
+	.bs-docs-container {
+		max-width: 970px;
+	}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	body {
+		padding-top: 0;
+	}
+	.jumbotron {
+		margin-top: -20px;
+	}
+}
+@media (max-width: 767px) {
+	body {
+		padding-top: 0;
+	}
+	.bs-docs-social {
+		margin: 0 -20px;
+	}
+	.jumbotron {
+		padding: 40px 20px;
+		margin-top: -20px;
+		margin-right: -20px;
+		margin-left: -20px;
+	}
+	.masthead h1 {
+		font-size: 90px;
+	}
+	.masthead p,
+	.masthead .btn {
+		font-size: 24px;
+	}
+}
+@media (max-width: 480px) {
+	body {
+		padding-top: 0;
+	}
+	.heading h1 {
+		font-size: 30px;
+	}
+	.heading-byline {
+		font-size: 18px;
+	}
+	.jumbotron h1 {
+		font-size: 45px;
+	}
+	.jumbotron p {
+		font-size: 18px;
+	}
+	.page-header h1 {
+		font-size: 30px;
+	}
+	input[type="text"], textarea {
+		font-size: 16px;
+	}
+}
