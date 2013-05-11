@@ -10,6 +10,8 @@ class Home extends CI_Controller {
 	function index() {
 		$data = array();
 
+		$data['main_content'] = 'home_view';
+
 		$limit = 6;
 		$offset = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
 
@@ -50,6 +52,6 @@ class Home extends CI_Controller {
 			$data['categories'] = $result['categories'];
 		}
 
-		$this->load->view('home_view', $data);
+		$this->load->view('includes/template', $data);
 	}
 }
