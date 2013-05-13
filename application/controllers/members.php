@@ -23,7 +23,7 @@ class Members extends CI_Controller {
 
 	function do_upload() {
 		$config['upload_path'] = './uploads/';
-		$config['allowed_types'] = 'jpg|jpeg|png';
+		$config['allowed_types'] = 'jpg|jpeg|png|gif';
 		$config['max_size'] = '2000';
 		$config['encrypt_name'] = TRUE;
 
@@ -185,8 +185,9 @@ class Members extends CI_Controller {
 	}
 
 	function delete() {
-		$this->members_model->delete();
-		redirect('members');
+		if ($this->members_model->delete()) {
+			redirect('members');
+		}
 	}
 
 	function logout() {
