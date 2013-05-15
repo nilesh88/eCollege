@@ -18,7 +18,9 @@ class Register extends CI_Controller {
 		$this->form_validation->set_rules('password_confirm', 'password confirmation', 'trim|required|matches[password]');
 
 		if ($this->form_validation->run() == FALSE) {
-			$this->load->view('register_view');
+			$data['main_content'] = 'register_view';
+
+			$this->load->view('includes/template', $data);
 		}
 		else {
 			if ($this->home_model->register()) {
@@ -26,6 +28,7 @@ class Register extends CI_Controller {
 					'title' => 'Confirmation Needed',
 					'content' => 'Check your email for the confirmation message.'
 				);
+				
 				$this->load->view('register_success_view', $data);
 			}
 		}

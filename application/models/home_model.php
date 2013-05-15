@@ -1,16 +1,13 @@
 <?php
 
 class Home_model extends CI_Model {
-	function get_data($limit, $offset) {
+	function get_data() {
 		$this->db->order_by('posted', 'desc');
-		$this->db->limit($limit, $offset);
+		$this->db->limit(5);
 		$query = $this->db->get('Sales');
 
 		if ($query->num_rows() > 0) {
-			$data['rows'] = $query->result();
-			$data['num_rows'] = $this->db->count_all('Sales');
-
-			return $data;
+			return $query->result();
 		}
 		else {
 			return FALSE;

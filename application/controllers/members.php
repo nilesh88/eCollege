@@ -12,11 +12,11 @@ class Members extends CI_Controller {
 	function index() {
 		$data = array();
 
-		$data['main_content'] = 'members_view';
-
 		if ($result = $this->members_model->get_user_items()) {
 			$data['rows'] = $result;
 		}
+
+		$data['main_content'] = 'members_view';
 
 		$this->load->view('includes/template', $data);
 	}

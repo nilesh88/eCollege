@@ -1,41 +1,70 @@
-	<div class="container">
-		<div class="page-header">
-			<h1>Newest Items</h1>
-		</div>
-		<?php if (isset($rows)): ?>
-		<ul class="thumbnails">
-		<?php foreach ($rows as $row): ?>
-			<li class="span4">
-				<div class="thumbnail">
-					<?php if (strlen($row->item_image)): ?>
-					<img src="<?php echo base_url(); ?>uploads/thumbs/300x200/<?php echo $row->item_image; ?>" alt="Item Image" />
-					<?php else: ?>
-					<img src="http://placehold.it/300x200" alt="300x200" />
-					<?php endif; ?>
-					<div class="caption">
-						<h3><?php echo $row->item; ?></h3>
-						<p><?php echo date('M j, Y h:i a', strtotime($row->posted)); ?></p>
-						<p>
-							<?php if ($row->price > 0): ?>
-							<?php echo '<span id="price-tag" class="label label-success">$' . $row->price . '</span>'; ?>
-							<?php else: ?>
-							<?php echo '<span id="price-tag" class="label label-success">Free</span>'; ?>
-							<?php endif; ?>
-						</p>
-						<p><?php echo anchor('view/' . $row->id . '/' . url_title($row->item, '-', TRUE), 'View Details', 'class="btn"'); ?></p>
+		<div class="hero-unit">
+			<div class="container">
+				<div class="row">
+					<div class="span6">
+						<h1>Fast. Easy. Secure.</h1>
+						<p>Project name helps college students buy and sell items with other college students. A unique form of social media combined with marketing.</p>
+					</div>
+					<div class="span6">
+						<?php echo form_open('register', 'class="signup"'); ?>
+							<input class="input-block-level" id="firstName" name="firstName" type="text" placeholder="First Name" />
+							<input class="input-block-level" id="lastName" name="lastName" type="text" placeholder="Last Name" />
+							<input class="input-block-level" id="email" name="email" type="text" placeholder="Student Email" />
+							<input class="input-block-level" id="password" name="password" type="password" placeholder="Password" />
+							<input class="btn btn-large btn-block btn-success" type="submit" value="Sign up!" />
+						<?php echo form_close(); ?>
 					</div>
 				</div>
-			</li>
-		<?php endforeach; ?>
-		</ul>
-		<?php else: ?>
-		<p>No items appear to be posted.</p>
-		<?php endif; ?>
-		<?php if (isset($pagination)): ?>
-		<?php echo $pagination; ?>
-		<?php endif; ?>
-		<footer>
-			<p class="pull-right"><?php echo anchor('https://twitter.com/rightlag', '@rightlag', 'target="_blank"'); ?></p>
-			<p>Project <?php echo date('Y'); ?></p>
-		</footer>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="home-marketing">
+					<div class="span4">
+						<h2>Register</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur est nulla, tincidunt ut egestas sed, luctus eget ante. In hac habitasse platea dictumst. Phasellus interdum, lacus sed ullamcorper pretium, ipsum tortor iaculis diam, ut ultricies felis mauris quis velit. Maecenas sodales quam sed tortor pharetra euismod.</p>
+					</div>
+					<div class="span4">
+						<h2>Post Items</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur est nulla, tincidunt ut egestas sed, luctus eget ante. In hac habitasse platea dictumst. Phasellus interdum, lacus sed ullamcorper pretium, ipsum tortor iaculis diam, ut ultricies felis mauris quis velit. Maecenas sodales quam sed tortor pharetra euismod.</p>
+					</div>
+					<div class="span4">
+						<h2>Be Social</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur est nulla, tincidunt ut egestas sed, luctus eget ante. In hac habitasse platea dictumst. Phasellus interdum, lacus sed ullamcorper pretium, ipsum tortor iaculis diam, ut ultricies felis mauris quis velit. Maecenas sodales quam sed tortor pharetra euismod.</p>
+					</div>
+				</div>
+			</div>
+			<hr class="featurette-divider" />
+			<div class="row">
+				<div class="span8">
+					<h1 class="market">Newest Items</h1>
+					<?php if (isset($rows)): ?>
+						<?php foreach ($rows as $row): ?>
+							<div class="media">
+								<a class="pull-left" href="#">
+									<?php if (!empty($row->item_image)): ?>
+										<img class="media-object" src="<?php echo site_url() . 'uploads/thumbs/64x64/' . $row->item_image; ?>">
+									<?php else: ?>
+										<img class="media-object" data-src="holder.js/64x64">
+									<?php endif; ?>
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#"><?php echo $row->item; ?></a></h4>
+									<small>Posted on: <?php echo date('Y-m-d', strtotime($row->posted)); ?></small>
+									<p><?php echo substr($row->description, 0, 140); ?></p>
+								</div>
+							</div>
+						<?php endforeach; ?>
+					<?php endif; ?>
+				</div>
+				<div class="span4">
+					<blockquote>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<small>Someone famous <cite title="Source Title">Source Title</cite></small>
+					</blockquote>
+				</div>
+			</div>
+			<hr class="featurette-divider" />
+			<div id="push"></div>
+		</div>
 	</div>
