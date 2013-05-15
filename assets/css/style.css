@@ -175,6 +175,7 @@ h1.market {
 	text-decoration: none;
 }
 
+#items th.action,
 #items td.action {
 	text-align: center;
 }

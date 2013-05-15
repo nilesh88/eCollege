@@ -29,7 +29,11 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav pull-right">
 							<li><a href="#">Browse Items</a></li>
-							<li><a href="<?php echo site_url() . 'login'; ?>">Sign in</a></li>
+							<?php if (!$this->session->userdata('logged_in')): ?>
+								<li><a href="<?php echo site_url() . 'login'; ?>">Sign in</a></li>
+							<?php else: ?>
+								<li><a href="<?php echo site_url() . 'members'; ?>"><?php echo sprintf('%s %s', $this->session->userdata('FirstName'), $this->session->userdata('LastName')); ?></a></li>
+							<?php endif; ?>
 						</ul>
 					</div>
 				</div>
