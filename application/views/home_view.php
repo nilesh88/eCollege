@@ -41,7 +41,7 @@
 					<?php if (isset($rows)): ?>
 						<?php foreach ($rows as $row): ?>
 							<div class="media">
-								<a class="pull-left" href="#">
+								<a class="pull-left" href="<?php echo site_url() . 'view/' . $row->id . '/' . url_title($row->item, '-', TRUE); ?>">
 									<?php if (!empty($row->item_image)): ?>
 										<img class="media-object" src="<?php echo site_url() . 'uploads/thumbs/64x64/' . $row->item_image; ?>">
 									<?php else: ?>
@@ -49,7 +49,7 @@
 									<?php endif; ?>
 								</a>
 								<div class="media-body">
-									<h4 class="media-heading"><a href="#"><?php echo $row->item; ?></a></h4>
+									<h4 class="media-heading"><a href="<?php echo site_url() . 'view/' . $row->id . '/' . url_title($row->item, '-', TRUE); ?>"><?php echo $row->item; ?></a></h4>
 									<small>Posted on: <?php echo date('Y-m-d', strtotime($row->posted)); ?></small>
 									<p><?php echo substr($row->description, 0, 140); ?></p>
 								</div>
