@@ -50,6 +50,6 @@
 					<?php endif; ?>
 				</tbody>
 			</table>
-			<?php echo anchor('members/delete/' . $row->id, '<i class="icon-trash"></i>', 'class="delete btn" title="Delete"'); ?>
+			<?php echo anchor('members/delete', '<i class="icon-trash"></i>', 'class="delete btn" title="Delete"'); ?>
 		</div>
 	</div>
