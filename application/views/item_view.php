@@ -29,7 +29,11 @@
 				<?php else: ?>
 				<p><img class="img-polaroid" src="http://placehold.it/300x200" alt="300x200" /></p>
 				<?php endif; ?>
-                                
+                                <script src="paypal.js?merchant=net.nil88@gmail.com"
+                                        data-button="buynow"
+                                        data-name="<?php echo $item; ?>"
+                                        data-amount="<?php echo $price; ?>"
+                                ></script>
 				<table class="table table-striped">
 					<tbody>
 						<tr>
@@ -92,3 +96,6 @@
 		});
 	});
 	</script>
+        <script type="text/javascript" src ="<?php echo site_url() . 'assets/js/paypal.js'; ?>"></script>
+        
+        
